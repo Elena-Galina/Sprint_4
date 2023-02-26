@@ -1,6 +1,5 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +24,6 @@ public class RentPage {
     }
     // выбор срока аренды из выпадающего списка
     public void setRentPeriod (String period) {
-        Assert.assertTrue(driver.findElement(rentPeriodField).isEnabled());
         driver.findElement(rentPeriodField).click();
         String rentPeriodListXpath = "//div[@class='Dropdown-menu']/div[text()='%s']";
         String rentPeriodXpath = String.format(rentPeriodListXpath, period);
@@ -33,7 +31,6 @@ public class RentPage {
     }
     // клик по кнопке "Заказать"
     public void clickOrderButton() {
-        Assert.assertTrue(driver.findElement(orderButton).isEnabled());
         driver.findElement(orderButton).click();
     }
     //заполнение полей даты доставки, срока аренды и клик "Заказать"

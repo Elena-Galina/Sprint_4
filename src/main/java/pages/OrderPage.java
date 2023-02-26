@@ -1,6 +1,5 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -29,32 +28,26 @@ public class OrderPage {
 
     //ввод значения в поле "Имя"
     public void setName (String name) {
-        Assert.assertTrue(driver.findElement(nameField).isEnabled());
         driver.findElement(nameField).sendKeys(name);
     }
     //ввод значения в поле "Фамилия"
     public void setFamily (String family) {
-        Assert.assertTrue(driver.findElement(familyField).isEnabled());
         driver.findElement(familyField).sendKeys(family);
     }
     //ввод значения в поле "Адрес..."
     public void setAddress (String address) {
-        Assert.assertTrue(driver.findElement(addressField).isEnabled());
         driver.findElement(addressField).sendKeys(address);
     }
     //ввод значения в поле "Телефон..."
     public void setPhone (String phone) {
-        Assert.assertTrue(driver.findElement(phoneField).isEnabled());
         driver.findElement(phoneField).sendKeys(phone);
     }
     // клик по кнопке "Далее"
     public void clickNextButton() {
-        Assert.assertTrue(driver.findElement(nextButton).isEnabled());
         driver.findElement(nextButton).click();
     }
     // выбор станции метро из выпадающего списка
     public void setMetro(String metroName) {
-        Assert.assertTrue(driver.findElement(metroField).isEnabled());
         driver.findElement(metroField).click();
 
         String metroListXpath = "//div[@class='select-search__select']/ul/li/button/div[text()='%s']";

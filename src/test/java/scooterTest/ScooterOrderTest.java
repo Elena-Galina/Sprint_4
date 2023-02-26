@@ -26,7 +26,7 @@ public class ScooterOrderTest extends BeforeAfterTest{
         this.date = date;
         this.periodRent = periodRent;
     }
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Оформление заказа самоката (позитивный сценарий). Тестовые данные заказчика: {0} {1} {2} {3}")
     public static Object[][] getCustomer() {
         return new Object[][]{
                 {"Александр", "Иванов", "г.Москва, Тверская улица, д.19, кв.100", "89050070707", "Тверская","01.03.2023","трое суток"},
