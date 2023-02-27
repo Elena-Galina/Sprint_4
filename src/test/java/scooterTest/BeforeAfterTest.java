@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BeforeAfterTest {
 
-    WebDriver driver;
+    protected WebDriver driver;
 
     @Before
     public void setup() {
